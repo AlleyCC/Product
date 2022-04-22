@@ -15,6 +15,7 @@ print(product)
 for p in product:  #把product清單中的每一個p拿出來看
 	print(p[0],'的價格是',p[1])
 
-with open('product.csv', 'w') as f:
+with open('product.csv', 'w', encoding='utf-8') as f:
+	f.write('商品，價格\n')
 	for p in product:
 		f.write(p[0]+','+p[1]+'\n')
