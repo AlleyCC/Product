@@ -4,7 +4,7 @@ import os #operating system
 
 #先檢查檔案有無存在檔案夾裡，再讀取檔案
 products = []
-if os.path.isfile('product.csv'):   #os.path.isfile是內建library 
+if os.path.isfile('product.csv'):   #os.path.isfile是內建library 檢查檔案在不在
 	print('找到檔案')
 	with open('product.csv','r', encoding='utf-8') as f:
 		for line in f:
