@@ -1,10 +1,19 @@
-#讀取檔案
+import os #operating system
+
+
+
+#先檢查檔案有無存在檔案夾裡，再讀取檔案
 products = []
-with open('product.csv','r', encoding='utf-8') as f:
-	for line in f:
-		if '商品,價格' in line:
-			continue
-print(products)
+if os.path.isfile('product.csv'):   #os.path.isfile是內建library 
+	print('找到檔案')
+	with open('product.csv','r', encoding='utf-8') as f:
+		for line in f:
+			if '商品,價格' in line:
+				continue
+	print(products)
+else:
+	print('找不到檔案')
+
 
 #讓使用者輸入
 while True:
